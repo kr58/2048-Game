@@ -1,10 +1,7 @@
 import java.util.*;
 public class MyPuzzle
 { 
-	MyPuzzle(int a[][]) // defining a grid
-	{
-		for(int i=0;i<4;i++) for(int j=0;j<4;j++) a[i][j]=0;
-	}
+	MyPuzzle(int a[][]) { for(int i=0;i<4;i++) for(int j=0;j<4;j++) a[i][j]=0; }
 	public static void create(int a[][]) // Creating a number on random empty position
 	{
 		int k=0,arr[][]=new int[16][2];
@@ -104,6 +101,10 @@ public class MyPuzzle
 			}
 		}
 		return 1;
+	}
+	public static boolean getWin() {
+		if(winFlag) return true;
+		return false;
 	}
 	public static void main(String[] args) {
 		int a[][]=new int[4][4];
